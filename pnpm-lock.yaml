@@ -7,10 +7,6 @@ settings:
 importers:
 
   .:
-    dependencies:
-      vue:
-        specifier: ^3.5.41
-        version: 3.5.41
     devDependencies:
       '@originjs/vite-plugin-federation':
         specifier: ^1.4.1
@@ -21,6 +17,9 @@ importers:
       vite:
         specifier: ^8.2.1
         version: 8.2.1(esbuild@0.28.2)
+      vue:
+        specifier: ^3.5.41
+        version: 3.5.41
 
 packages:
 
