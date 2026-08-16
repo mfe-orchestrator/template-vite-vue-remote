@@ -26,10 +26,10 @@ pnpm build      # production build into dist/
 │   ├── App.vue                              # dev only shell
 │   ├── components/Button.vue                # the exposed component
 │   ├── index.css
-│   └── main.js
+│   └── main.ts
 ├── package.json
 ├── pnpm-workspace.yaml                      # pnpm build script approvals
-└── vite.config.js                           # federation config
+└── vite.config.ts                           # federation config
 ```
 
 ## What this remote exposes
@@ -40,7 +40,7 @@ pnpm build      # production build into dist/
 
 Federation name `remote_app`, entry file `dist/assets/remoteEntry.js`.
 
-Add more in the `exposes` map of `vite.config.js`. Anything you expose there becomes importable from a
+Add more in the `exposes` map of `vite.config.ts`. Anything you expose there becomes importable from a
 host as `<remote-name>/<key>`.
 
 A host does not hardcode this remote's URL: it asks the orchestrator for it by slug. See the host
@@ -50,7 +50,7 @@ templates for the other side of the wiring.
 
 `pnpm build` writes to `dist/`. The federation entry lands at **`dist/assets/remoteEntry.js`**, which is the `entryPoint` the marketplace entry declares.
 
-Check it after any change to `vite.config.js`: the orchestrator serves exactly that path, so a build that
+Check it after any change to `vite.config.ts`: the orchestrator serves exactly that path, so a build that
 puts the entry somewhere else is broken.
 
 ## Deploying
