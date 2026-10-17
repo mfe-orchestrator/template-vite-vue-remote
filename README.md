@@ -5,7 +5,7 @@ marketplace as `vite-remote-vue`. Vite + Vue 3, wired as a **remote**.
 
 ## Requirements
 
-- Node.js 20 or newer
+- Node.js 22.12 or newer (CI builds on Node 24, the current LTS)
 - [pnpm](https://pnpm.io) 10 or newer
 
 ## Getting started
